@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              dark: "#111111",
+              light: "#FAFAFA",
+              gray: "#71717A",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased selection:bg-dark selection:text-light">
+    <nav
+      class="fixed w-full z-50 bg-light/90 backdrop-blur-md border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <a href="/" class="text-2xl font-bold tracking-tighter"
+              >Dion's Port<span class="text-gray-400">folio.</span></a
+            >
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-sm font-medium text-dark hover:text-gray-500 transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-sm font-medium text-dark hover:text-gray-500 transition-colors"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-sm font-medium text-dark hover:text-gray-500 transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-sm font-medium text-dark hover:text-gray-500 transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-dark hover:text-gray-500 focus:outline-none p-2"
+            >
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-light border-b border-gray-200 absolute w-full left-0"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+          <a
+            href="#home"
+            class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-dark hover:bg-gray-100 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-dark hover:bg-gray-100 transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-dark hover:bg-gray-100 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="mobile-link block px-3 py-3 rounded-md text-base font-medium text-dark hover:bg-gray-100 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-32 pb-20 md:pt-48 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center min-h-[80vh]"
+    >
+      <div class="max-w-3xl">
+        <p class="text-gray mb-4 font-medium tracking-wide uppercase text-sm">
+          Hello, I am a front-end Web Developer
+        </p>
+        <h1
+          class="text-5xl md:text-7xl font-bold tracking-tighter leading-tight mb-8"
+        >
+          Crafting digital <br class="hidden md:block" />
+          experiences with <span class="text-gray-400">purpose.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray mb-10 max-w-2xl leading-relaxed">
+          I specialize in building clean, responsive, and user-centric websites.
+          Welcome to my curated collection of digital projects.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a
+            href="#projects"
+            class="px-8 py-4 bg-dark text-light font-medium rounded-none hover:bg-gray-800 transition-colors inline-block text-center"
+            >View Projects</a
+          >
+          <a
+            href="#contact"
+            class="px-8 py-4 bg-transparent border border-dark text-dark font-medium rounded-none hover:bg-dark hover:text-light transition-colors inline-block text-center"
+            >Contact Me</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tighter mb-6">
+              About Me
+            </h2>
+            <p class="text-gray leading-relaxed mb-4 text-lg">
+              I am a passionate web developer dedicated to creating intuitive
+              and dynamic user experiences. My approach blends minimal design
+              aesthetics with robust technical execution.
+            </p>
+            <p class="text-gray leading-relaxed text-lg">
+              Over the years, I've had the privilege of working on diverse
+              projects, ranging from corporate landing pages to interactive
+              wedding invitations. I believe in writing clean code and designing
+              interfaces that speak for themselves.
+            </p>
+          </div>
+          <div
+            class="bg-gray-100 aspect-square md:aspect-[4/3] rounded-2xl flex items-center justify-center overflow-hidden relative"
+          >
+            <!-- Placeholder for profile picture -->
+            <img
+              src="images/dion.png"
+              alt="Profile"
+              class="object-cover w-full h-full grayscale hover:grayscale-0 transition duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-light">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-16 md:flex md:justify-between md:items-end">
+          <div class="max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-4">
+              Selected Works
+            </h2>
+            <p class="text-gray text-lg">
+              A showcase of my recent web development projects.
+            </p>
+          </div>
+        </div>
+
+        <!-- Grid container for 6 projects -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Project 1 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/kolosal.png"
+                alt="Kolosal Production"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">Kolosal Production</h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                A professional company website focused on production services,
+                featuring a clean layout and responsive design.
+              </p>
+            </div>
+            <a
+              href="https://kolosalproduction.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/rico.png"
+                alt="Rico & Diana Marriage"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">Rico & Diana Marriage</h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                A digital wedding invitation with elegant aesthetics, smooth
+                animations, and RSVP functionality.
+              </p>
+            </div>
+            <a
+              href="https://ricodianamarriage.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/profitara.png"
+                alt="Profitara"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">Profitara</h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                A modern web application tailored for specific business needs
+                with a focus on user interface and experience.
+              </p>
+            </div>
+            <a
+              href="https://profitara.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/ac.png"
+                alt="AC KW 2"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">
+                Akademi Crypto Clone (personal)
+              </h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                A creative front-end project exploring engaging layouts and
+                interactive elements.
+              </p>
+            </div>
+            <a
+              href="https://dionwsaja.github.io/ac_kw_2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/mini.png"
+                alt="MinimiWaste"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">MinimiWaste</h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                An environmentally conscious web platform aimed at waste
+                reduction awareness, featuring a clean UI.
+              </p>
+            </div>
+            <a
+              href="https://minimiwaste.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="group project-card cursor-pointer flex flex-col h-full">
+            <div
+              class="overflow-hidden rounded-xl bg-gray-100 aspect-[4/3] mb-6 relative"
+            >
+              <img
+                src="images/vio.png"
+                alt="Wedding Project"
+                class="project-img object-cover w-full h-full transition-transform duration-700 ease-in-out"
+              />
+              <div
+                class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-300"
+              ></div>
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold mb-2">Digital Wedding</h3>
+              <p class="text-gray text-sm mb-4 line-clamp-2">
+                Another variation of a beautifully crafted digital wedding
+                invitation designed to impress guests.
+              </p>
+            </div>
+            <a
+              href="https://dionwsaja.github.io/wedding/#home"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-auto inline-flex items-center text-sm font-semibold uppercase tracking-wider hover:text-gray-500 transition-colors w-fit border-b border-dark pb-1 group-hover:border-gray-500"
+            >
+              Visit Project <i class="fa-solid fa-arrow-right-long ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
+      <div
+        class="max-w-4xl mx-auto text-center border-t border-b border-gray-200 py-16"
+      >
+        <h2 class="text-3xl md:text-5xl font-bold tracking-tighter mb-6">
+          Let's work together.
+        </h2>
+        <p class="text-gray text-lg mb-10 max-w-xl mx-auto">
+          Have a project in mind or just want to say hi? Feel free to reach out.
+          I'm currently available for new opportunities.
+        </p>
+        <div
+          class="flex flex-col gap-2 md:flex-row justify-center items-center"
+        >
+          <a
+            href="https://wa.me/6281335718148"
+            target="_blank"
+            class="inline-flex items-center px-8 py-4 bg-dark text-light font-medium hover:bg-gray-800 transition-colors"
+          >
+            Contact Person <i class="fa-brands fa-whatsapp ml-3 text-lg"></i>
+          </a>
+
+          <a
+            href="mailto:contact.dionwangsa@gmail.com"
+            target="_blank"
+            class="inline-flex items-center px-8 py-4 bg-dark text-light font-medium hover:bg-gray-800 transition-colors"
+          >
+            Email <i class="fa-regular fa-envelope ml-3 text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-light py-10 px-4 sm:px-6 lg:px-8 border-t border-gray-200"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="text-sm text-gray mb-4 md:mb-0">
+          &copy; <span id="year"></span> dionwangsa Portfolio. All rights
+          reserved.
+        </p>
+        <div class="flex space-x-6 text-gray">
+          <a
+            href="https://github.com/dionwsaja"
+            target="_blank"
+            class="hover:text-dark transition-colors"
+            ><i class="fa-brands fa-github text-xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/dionwangsa/"
+            target="_blank"
+            class="hover:text-dark transition-colors"
+            ><i class="fa-brands fa-linkedin text-xl"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/dionwangsa/"
+            target="_blank"
+            class="hover:text-dark transition-colors"
+            ><i class="fa-brands fa-instagram text-xl"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+body {
+  background-color: #fafafa;
+  color: #111111;
+}
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
